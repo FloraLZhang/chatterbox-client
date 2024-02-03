@@ -15,19 +15,20 @@ var MessagesView = {
   // response properties
   // campus, created_at, github_handle, message_id, roomname, text, updated_at, username
 
-  messageTemplate: _.template(
-    "<div class='message-div'>" +
-      "<span class='created-at'>" +
-        "<%=message[createdAt]%>" +
-      "</span>" +
-      "<span class='username'>" +
-        "<%=message[username]%>" +
-      "</span>" +
-      "<p class='text'>" +
-        "<%=message[text]%>" +
-      "</span>" +
-    "</div>"
-  ),
+  //template in messageView.js
+  // messageTemplate: _.template(
+  //   "<div class='message-div'>" +
+  //     "<span class='created-at'>" +
+  //       "<%=message[createdAt]%>" +
+  //     "</span>" +
+  //     "<span class='username'>" +
+  //       "<%=message[username]%>" +
+  //     "</span>" +
+  //     "<p class='text'>" +
+  //       "<%=message[text]%>" +
+  //     "</span>" +
+  //   "</div>"
+  // ),
 
   render: function() {
     // TODO: Render _all_ the messages.
