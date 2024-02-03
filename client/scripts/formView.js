@@ -9,18 +9,26 @@ var FormView = {
 
   // sets the funciton to excecute when 'submit' is clicked
   initialize: function() {
-    FormView.$form.on('submit', FormView.handleSubmit);
+    this.$form.on('submit', this.handleSubmit);
   },
 
   // the function that is being assigned to the form's submit button.
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-
+    console.log('click');
     // TODO: Currently, this is all handleSubmit does.
     // Make this function actually send a message to the Parse API.
-
-    console.log('click!');
+    const text = $('#message').val();
+    const username = '';
+    const roomname = '';
+    const message = {
+      username: username,
+      text: text,
+      roomname: roomname
+    };
+    Parse.create(message);
+    App.fetch();
   },
 
 

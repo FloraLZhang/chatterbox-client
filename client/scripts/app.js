@@ -18,6 +18,7 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    setInterval(App.fetch, 3000);
 
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
@@ -28,9 +29,11 @@ var App = {
       // examine the response from the server request:
       // response properties
       // campus, created_at, github_handle, message_id, roomname, text, updated_at, username
-      console.log(data);
+      //console.log(data);
       callback();
-      App.data = data;
+      Messages.data = data;
+      Rooms.retrieveRooms(); // I think something is wrong with our asynchronis functionality
+      MessagesView.render(); // I think something is wrong with our asynchronis functionality
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
     });
