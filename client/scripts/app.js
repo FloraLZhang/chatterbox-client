@@ -26,8 +26,11 @@ var App = {
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       // examine the response from the server request:
+      // response properties
+      // campus, created_at, github_handle, message_id, roomname, text, updated_at, username
       console.log(data);
-
+      callback();
+      App.data = data;
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
     });
