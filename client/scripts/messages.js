@@ -5,7 +5,10 @@
 var Messages = {
 
   // TODO: Define how you want to store your messages.
-  //_data:
+  data: [],
+
+
+
 
   // getAllMessages() {
   //   return Messages._data;
